@@ -5416,7 +5416,7 @@ button.close {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: -10%;
-  font-size: 1.33333333em;
+  font-size: 1.33333333;
 }
 /* makes sure icons active on rollover in links */
 a [class^="icon-"],
@@ -5427,16 +5427,16 @@ a [class*=" icon-"] {
 [class^="icon-"].icon-fixed-width,
 [class*=" icon-"].icon-fixed-width {
   display: inline-block;
-  width: 1.14285714em;
+  width: 1.14285714;
   text-align: right;
-  padding-right: 0.28571429em;
+  padding-right: 0.28571429;
 }
 [class^="icon-"].icon-fixed-width.icon-large,
 [class*=" icon-"].icon-fixed-width.icon-large {
-  width: 1.42857143em;
+  width: 1.42857143;
 }
 .icons-ul {
-  margin-left: 2.14285714em;
+  margin-left: 2.14285714;
   list-style-type: none;
 }
 .icons-ul > li {
@@ -5444,8 +5444,8 @@ a [class*=" icon-"] {
 }
 .icons-ul .icon-li {
   position: absolute;
-  left: -2.14285714em;
-  width: 2.14285714em;
+  left: -2.14285714;
+  width: 2.14285714;
   text-align: center;
   line-height: inherit;
 }
@@ -6867,7 +6867,7 @@ a .icon-flip-vertical:before {
  *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
  */
 .lt-ie8 .icon-large {
-  font-size: 1.33333333em;
+  font-size: 1.33333333;
   margin-top: -4px;
   padding-top: 3px;
   margin-bottom: -4px;
@@ -9024,7 +9024,7 @@ a:hover .thumbnail {
 .review_all li ol,
 .review_read li ol,
 .side_categories li ol {
-  padding-left: 1.78571429em;
+  padding-left: 1.78571429;
 }
 .add-to-basket {
   width: 220px;

@@ -1,3 +1,52 @@
+// Core variables and mixins
+@import "bootstrap3/variables.less";
+@import "bootstrap3/mixins.less";
+
+// Oscar variables
+@import "page/mixins.less"; // Kept separate for bootstrap updates - but should be imported into bootstap mixins.
+
+// Reset and dependencies
+@import "bootstrap3/normalize.less";
+@import "bootstrap3/print.less";
+@import "bootstrap3/glyphicons.less";
+
+// Core CSS
+@import "bootstrap3/scaffolding.less";
+@import "bootstrap3/type.less";
+@import "bootstrap3/code.less";
+@import "bootstrap3/grid.less";
+@import "bootstrap3/tables.less";
+@import "bootstrap3/forms.less";
+@import "bootstrap3/buttons.less";
+
+// Components
+@import "bootstrap3/component-animations.less";
+@import "bootstrap3/dropdowns.less";
+@import "bootstrap3/button-groups.less";
+@import "bootstrap3/input-groups.less";
+@import "bootstrap3/navs.less";
+@import "bootstrap3/navbar.less";
+@import "bootstrap3/breadcrumbs.less";
+@import "bootstrap3/pagination.less";
+@import "bootstrap3/pager.less";
+@import "bootstrap3/labels.less";
+@import "bootstrap3/badges.less";
+@import "bootstrap3/jumbotron.less";
+@import "bootstrap3/thumbnails.less";
+@import "bootstrap3/alerts.less";
+@import "page/alerts.less";
+@import "bootstrap3/progress-bars.less";
+@import "bootstrap3/media.less";
+@import "bootstrap3/list-group.less";
+@import "bootstrap3/panels.less";
+@import "bootstrap3/responsive-embed.less";
+@import "bootstrap3/wells.less";
+@import "bootstrap3/close.less";
+
+// Utility classes
+@import "bootstrap3/utilities.less";
+@import "bootstrap3/responsive-utilities.less";
+
 // Core variables and mixins separate from frontend variables and mixins
 @import "dashboard/variables.less"; // Modify this for custom colors, font-sizes, etc
 @import "dashboard/mixins.less";
@@ -10,6 +59,7 @@
 // FONT FOR THE DASHBOARD
 // -----------------------------
 
+
 // TYPES CHANGES
 // -----------
 h1, h2, h3, h4, h5, h6 {
@@ -17,36 +67,46 @@ h1, h2, h3, h4, h5, h6 {
   margin-top:0;
   font-weight:normal;
 }
+
 h1 {
     font-size: 30px;
 }
+
 h2 {
     font-size: 18px;
 }
+
+h3 {
+  font-size: 20px;
+}
+
+h3.app-ico:before {
+    display: none;
+}
+
 body {
   font-family: @dashFontFamily;
   font-size: 12px;
 }
+
 label, input, button, select, textarea {
   font-size: 12px;
 }
-h3 {
-  font-size: 20px;
-}
-h3.app-ico:before {
-    display: none;
-}
+
+
 // BUTTONS
 // -----------
 .btn {
   font-weight:normal;
 }
+
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn {
   font-size:12px;
   font-family:inherit;
 }
+
 .btn-warning,
 .btn-success,
 .btn-info {
@@ -65,16 +125,20 @@ h3.app-ico:before {
     color:#333;
   }
 }
+
 .btn-primary {
   .buttonBackground(#0083C9, #005096);
 }
+
 .btn-primary,
 .btn-danger {
   font-weight:bold;
 }
+
 td .btn-toolbar {
   margin:0;
 }
+
 
 // FORM CHANGES
 // -----------
@@ -98,11 +162,13 @@ td .btn-toolbar {
     max-height:200px;
   }
 }
+
 .form-inline {
   select {
     min-width:200px;
   }
 }
+
 .form-inline {
   margin-bottom: 0;
   .help-block:first-child, .error-block:first-child {
@@ -115,21 +181,25 @@ td .btn-toolbar {
     margin-right:10px;
   }
 }
+
 .form-stacked {
   .error-block {
     display:block;
     color:#b94a48;
   }
 }
+
 .fields-full {
   input[type=text],
   textarea {
     width:100%;
   }
 }
+
 form.flat {
   margin:0;
 }
+
 .well,
 .tabbable.dashboard .tab-content {
   .form-actions {
@@ -142,6 +212,7 @@ form.flat {
     border-top-color: #ccc;
   }
 }
+
 .tabbable.dashboard .tab-content {
   .form-actions {
     bottom:-50px;
@@ -150,11 +221,13 @@ form.flat {
     padding-right: 29px;
   }
 }
+
 .well form {
   .form-actions {
     bottom:-39px;
   }
 }
+
 .create-page {
   .form-horizontal,
   .form-stacked {
@@ -181,9 +254,11 @@ form.flat {
     font-weight:bold;
   }
 }
+
 .wysihtml5-sandbox {
     border:1px solid #ccc!important;
 }
+
 /* ADDITIONAL ERRORS */
 .errorlist {
   margin:0 0 0 20px;
@@ -194,6 +269,7 @@ form.flat {
     list-style:none;
   }
 }
+
 .form-inline {
   .help-block, .error-block {
     display:inline-block;
@@ -210,6 +286,8 @@ form.flat {
     width: 140px;
   }
 }
+
+
 // TABLE CHANGES
 // -----------
 .table-bordered,
@@ -217,48 +295,58 @@ form.flat {
 .table-bordered td  {
   border-color:#bbb;
 }
+
 .table {
   background-color: @white;
 }
+
 .table thead tr th.asc i:before {
   content: "\f077";
 }
+
 .table thead tr th.desc i:before {
   content: "\f078";
 }
+
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
   background-color: #efefef;
 }
+
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
-background-color: #FFF49F;
+  background-color: #FFF49F;
 }
+
 // OSCAR DASHBOARD UNIQUE STYLES
 // -----------
 body {
   background: url("../img/ui/dashboard/bg_subtle_dots.png") repeat scroll 0 0 #fff;
 }
+
 .container-fluid.dashboard {
   margin: 0 auto;
-/*  max-width: 1170px;*/
   position: relative;
   padding: 0 20px;
 }
-.dashboard > .content {
-  margin-top: @baseLineHeight;
-}
+
 .fancypages .dashboard > .content {
 }
+
+.navbar {
+  margin-bottom: 0;
+}
+
 .navbar-accounts {
-  .navbar-inner {
+  .container-fluid {
+    max-width: 100%;
     padding-left:  20px;
     padding-right: 20px;
     min-height: 50px;
     font-size: 12px;
     #gradient > .vertical(#373737, #242424);
     border: none;
-    .brand {
+    .navbar-brand {
       background: url("../img/ui/dashboard/logo_oscar.png") no-repeat scroll 0 0 transparent;
       text-indent: -9999px;
       display: block;
@@ -268,21 +356,24 @@ body {
       margin-left: 0;
       margin-top: 5px;
     }
-    .nav {
+    .navbar-nav {
       top: 5px;
     }
-    .nav > li > a {
+    .navbar-nav > li > a {
       color: #C1C1C1;
     }
   }
 }
+
 .navbar .nav > li span {
     display:block;
     padding:10px;
 }
+
 .navbar-inverse {
   color: #DCDCDC;
 }
+
 .subnav-fixed {
   position: fixed;
   right: 0;
@@ -292,8 +383,10 @@ body {
   .box-shadow(0 1px 5px rgba(0,0,0,.1));
   border-bottom:1px solid #D5D5D5;
 }
+
 .navbar-primary {
-  .navbar-inner {
+  min-height: 44px;
+  .container-fluid {
     #gradient > .vertical(#353535, #373737);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false) !important;
     border-top: 1px solid #5B5B5B;
@@ -301,6 +394,7 @@ body {
     *z-index:10;
   }
 }
+
 .navbar-primary {
   .nav {
     &.nav-pills .open .dropdown-toggle {
@@ -315,7 +409,7 @@ body {
         .border-radius(0);
         color: #DCDCDC;
         font-size: 12px;
-        padding: 15px;
+        padding: 12px;
         .caret {
           border-top-color: #DCDCDC;
           border-bottom-color: #DCDCDC;
@@ -342,7 +436,6 @@ body {
   }
 }
 
-
 .navbar-primary .nav {
   > li i {
     color: #dcdcdc;
@@ -358,14 +451,17 @@ body {
 .breadcrumb {
   margin-top:20px;
 }
+
 button {
   background-color:transparent;
 }
+
 .page-header {
   padding: 0 0 10px 0;
   margin-bottom: 0;
   border-bottom: 0;
 }
+
 caption,
 .table-header {
   .clearfix();
@@ -402,6 +498,7 @@ caption,
     padding-right: 10px;
   }
 }
+
 .content-block {
   border: 1px solid #ccc;
   margin-bottom: 20px;
@@ -433,6 +530,7 @@ caption,
     }
   }
 }
+
 .search-adv {
   margin:0;
   position:relative;
@@ -446,9 +544,11 @@ caption,
     margin:0;
   }
 }
+
 .no-float {
   float:none;
 }
+
 .control-group.pull-left.no-float {
   > label {
     width: 140px;
@@ -457,27 +557,33 @@ caption,
     margin-left: 160px;
   }
 }
+
 .pull-left.btn {
   margin-left:20px;
 }
+
 .pull-left.no-float.btn {
   margin-left:160px;
 }
+
 .controls {
   ul {
     margin-left:0px;
     list-style:none;
   }
 }
+
 .alert-message.block-message.file_upload p {
   margin-right:10px;
 }
+
 .tabs.product_managment {
   margin-bottom:0px;
   li.active a {
     background-color:#efefef;
   }
 }
+
 .tabbable.dashboard {
   margin-bottom:@baseLineHeight;
   .navbar, .nav-tabs {
@@ -491,6 +597,7 @@ caption,
     padding:30px;
   }
 }
+
 // WELLS
 // -----
 .well,
@@ -945,18 +1052,10 @@ textarea.plain {
   }
   .navbar-primary .nav > li > a {
     border:0;
+    padding: 0;
     .border-radius(4px);
   }
   .navbar-primary .nav > li > a:hover {
     background:#222;
-  }
-}
-
-// Override for Bootstrap 2.3.1/2.3.2
-// Fix disappearing menu in mobile Android Chrome
-// https://github.com/twbs/bootstrap/issues/11145
-@media (max-width: 480px) {
-  .nav-collapse {
-    -webkit-transform: none;
   }
 }

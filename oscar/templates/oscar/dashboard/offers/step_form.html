@@ -50,7 +50,7 @@
 
 {% block dashboard_content %}
     <div class="row-fluid">
-        <div class="span3">
+        <div class="col-md-3">
             {% block progress %}
                 {% include 'dashboard/offers/progress.html' %}
             {% endblock %}
@@ -89,7 +89,7 @@
             </form>
         </div>
         {% if session_offer %}
-        <div class="span3">
+        <div class="col-md-3">
             {% block summary %}
                 {% include 'dashboard/offers/summary.html' %}
             {% endblock %}

@@ -150,7 +150,7 @@
                             <div class="row-fluid">
                                 {% for address in customer.addresses.all %}
 
-                                    <div class="span3">
+                                    <div class="col-md-3">
                                         <div class="well well-info">
                                             {% for field in address.active_address_fields %}
                                                 {{ field }}<br/>
