@@ -5,6 +5,13 @@ ul {
         margin-left:0;
         padding-left:0;
         list-style: none;
+
+        &.no-padding {
+            [class*="col-"] {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 }
 
