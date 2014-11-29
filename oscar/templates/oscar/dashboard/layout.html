@@ -8,7 +8,6 @@
 
 {% block mainstyles %}
     {% compress css %}
-        <link rel="stylesheet" href="{% static "oscar/css/styles.css" %}" />
         {% if use_less %}
             <link rel="stylesheet" type="text/less" href="{% static "oscar/less/dashboard.less" %}" />
         {% else %}
@@ -70,7 +69,7 @@
                     </button>
                 </div>
 
-                <div class="navbar-collapse navbar-primary">
+                <div class="navbar-collapse nav-primary">
                     <ul class="nav navbar-nav nav-pills dashboard">
                         {% for item in nav_items %}
                         <li class="dropdown">
@@ -108,7 +107,7 @@
     <div class="container-fluid dashboard">
         {% block breadcrumbs %}
         <ul class="breadcrumb">
-            <li><a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a> <span class="divider">/</span></li>
+            <li><a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a></li>
         </ul>
         {% endblock %}
 
@@ -148,7 +147,7 @@
 {% block scripts %}
     {% compress js %}
     <!-- Twitter Bootstrap -->
-    <script type="text/javascript" src="{% static "oscar/js/bootstrap/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "oscar/js/bootstrap3/bootstrap.min.js" %}"></script>
     <!-- Oscar -->
     <script src="{% static "oscar/js/oscar/ui.js" %}" type="text/javascript" charset="utf-8"></script>
     {% endcompress %}

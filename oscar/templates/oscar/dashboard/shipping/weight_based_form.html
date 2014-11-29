@@ -8,23 +8,20 @@
     {% else %}
         {% trans "Create a new shipping method" %}
     {% endif %}
-    | {{ block.super }} 
+    | {{ block.super }}
 {% endblock %}
 
 {% block breadcrumbs %}
     <ul class="breadcrumb">
         <li>
             <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
-            <span class="divider">/</span>
         </li>
         <li>
             <a href="{% url 'dashboard:shipping-method-list' %}">{% trans "Shipping methods" %}</a>
-            <span class="divider">/</span>
         </li>
         {% if method %}
             <li>
-                {{ method.name }} 
-                <span class="divider">/</span>
+                {{ method.name }}
             </li>
             <li class="active">{% trans "Edit" %}</li>
         {% else %}

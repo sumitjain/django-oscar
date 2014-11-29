@@ -15,18 +15,15 @@
     <ul class="breadcrumb">
         <li>
             <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
-            <span class="divider">/</span>
         </li>
         <li>
             <a href="{% url 'dashboard:catalogue-product-list' %}">{% trans "Products" %}</a>
-            <span class="divider">/</span>
         </li>
         {% if parent %}
             <li>
                 <a href="{% url 'dashboard:catalogue-product' parent.id %}">
                     {{ parent.title }}
                 </a>
-                <span class="divider">/</span>
             </li>
         {% endif %}
         <li class="active">{{ title }}</li>
@@ -40,7 +37,7 @@
         {% csrf_token %}
 
         {% if parent %}
-            <div class="row-fluid">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="alert alert-info">
                         {% url 'dashboard:catalogue-product' pk=parent.id as parent_url %}
@@ -53,7 +50,7 @@
             </div>
         {% endif %}
 
-        <div class="row-fluid">
+        <div class="row">
 
             {% block tab_nav %}
                 <div class="col-md-3">
