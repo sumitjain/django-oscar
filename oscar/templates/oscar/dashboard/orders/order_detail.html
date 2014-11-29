@@ -447,7 +447,7 @@
                                     {% for field in order.shipping_address.active_address_fields %}
                                         {{ field }}<br/>
                                     {% endfor %}
-                                    <a class="btn" href="{% url 'dashboard:order-shipping-address' order.number %}">
+                                    <a class="btn btn-default" href="{% url 'dashboard:order-shipping-address' order.number %}">
                                         {% trans "Update" %}
                                     </a>
                                 </td>

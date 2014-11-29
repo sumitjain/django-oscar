@@ -8,7 +8,6 @@
 // Reset and dependencies
 @import "bootstrap3/normalize.less";
 @import "bootstrap3/print.less";
-@import "bootstrap3/glyphicons.less";
 
 // Core CSS
 @import "bootstrap3/scaffolding.less";
@@ -54,7 +53,6 @@
 // Components: Icons / Fonts
 @import "font-awesome/font-awesome.less"; // Replaced sprites with font-awesome
 @import "font-awesome/font-awesome-ie7.less";
-@import url("//fonts.googleapis.com/css?family=Open+Sans:700,300");
 
 // FONT FOR THE DASHBOARD
 // -----------------------------
@@ -166,6 +164,9 @@ td .btn-toolbar {
 .form-inline {
   select {
     min-width:200px;
+  }
+  .select2-container.form-control {
+      display: inline-block;
   }
 }
 
@@ -972,10 +973,11 @@ div[data-spy="affix"].affix {
     bottom:0;
     left:0;
     width:100%;
-  }
-  .form-actions {
-    margin:0;
+    padding: 20px;
     background:#2a2a2a;
+  }
+  .form-group {
+    margin:0;
   }
 }
 .well-stacked {

@@ -27,6 +27,7 @@
                     <th>{% trans "Name" %}</th>
                     <th>{% trans "Requires shipping" %}</th>
                     <th>{% trans "Track stock?" %}</th>
+                    <th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,10 +39,10 @@
                         <td>
                             <div class="btn-toolbar">
                                 <div class="btn-group">
-                                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <button class="btn btn-default dropdown-toggle" type="submit" data-toggle="dropdown" aria-expanded="true">
                                         {% trans "Actions" %}
                                         <span class="caret"></span>
-                                    </a>
+                                    </button>
                                     <ul class="nav dropdown-menu pull-right">
                                         <li><a href="{% url 'dashboard:catalogue-class-update' pk=class.id %}">{% trans "Edit product type" %}</a></li>
                                         <li><a href="{% url 'dashboard:catalogue-class-delete' pk=class.id %}">{% trans "Delete" %}</a></li>
