@@ -23,7 +23,7 @@
 {% block dashboard_content %}
     <div class="row">
         {% block user_general_info %}
-            <div class="">
+            <div class="col-md-12">
                 <div class="table-header">
                     <h2>{% trans "General" %}</h2>
                 </div>
@@ -97,9 +97,10 @@
                 </table>
             </div>
         {% endblock %}
-
+    </div>
+    <div class="row">
         {% block user_additional_info %}
-            <div class="tabbable dashboard">
+            <div class="tabbable dashboard col-md-12">
                 {% block tab_nav %}
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#user_orders" data-toggle="tab">{% trans "Orders" %}</a></li>
