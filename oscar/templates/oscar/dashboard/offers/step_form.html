@@ -51,7 +51,7 @@
                 {% include 'dashboard/offers/progress.html' %}
             {% endblock %}
         </div>
-        <div class="{% if session_offer %}span6{% else %}span9{% endif %}">
+        <div class="{% if session_offer %}col-md-6{% else %}col-md-9{% endif %}">
             <form action="." method="post" class="form-stacked wysiwyg fixed-actions">
                 <div class="table-header">
                     <h3>{{ title }}</h3>
