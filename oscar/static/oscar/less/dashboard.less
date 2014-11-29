@@ -335,6 +335,18 @@ body {
 
 .navbar {
   margin-bottom: 0;
+  .nav > li span {
+    display:block;
+    padding: @navbar-padding-vertical;
+  }
+}
+
+.dropdown-menu {
+  font-size: 12px;
+}
+
+.navbar-inverse {
+  color: #DCDCDC;
 }
 
 .navbar-accounts {
@@ -365,25 +377,6 @@ body {
   }
 }
 
-.navbar .nav > li span {
-    display:block;
-    padding:10px;
-}
-
-.navbar-inverse {
-  color: #DCDCDC;
-}
-
-.subnav-fixed {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: @zindexFixedNavbar;
-  top: 50px;
-  .box-shadow(0 1px 5px rgba(0,0,0,.1));
-  border-bottom:1px solid #D5D5D5;
-}
-
 .navbar-primary {
   min-height: 44px;
   .container-fluid {
@@ -393,11 +386,9 @@ body {
     *position:relative;
     *z-index:10;
   }
-}
 
-.navbar-primary {
   .nav {
-    &.nav-pills .open .dropdown-toggle {
+    &.open .dropdown-toggle {
       border-color: #444;
       border-right-color: #222;
     }
@@ -416,6 +407,14 @@ body {
           margin-top: 4px;
         }
       }
+      > a:hover .caret {
+        border-top-color: #B2DEF2;
+        border-bottom-color: #B2DEF2;
+      }
+      i {
+        color: #dcdcdc;
+        padding-right: 12px;
+      }
       .dropdown-menu {
         .border-radius(0);
       }
@@ -424,7 +423,7 @@ body {
   .nav > .active > a,
   .nav > .active > a:hover,
   .nav > li > a:hover,
-  .nav-pills .open .dropdown-toggle {
+  .nav .open .dropdown-toggle {
     color: #B2DEF2;
     background-color: #373737;
     border-right-color: @grayDarker;
@@ -434,18 +433,6 @@ body {
       color: #B2DEF2;
     }
   }
-}
-
-.navbar-primary .nav {
-  > li i {
-    color: #dcdcdc;
-    padding-right: 12px;
-  }
-}
-
-.navbar-primary .nav > li > a:hover .caret {
-  border-top-color: #B2DEF2;
-  border-bottom-color: #B2DEF2;
 }
 
 .breadcrumb {
@@ -726,6 +713,7 @@ caption,
     height: 50%;
     #gradient > .vertical(#0e91bf, #0b759b);
 }
+
 // ORDER SUMMARY
 // ----------------
 .order-summary {
@@ -906,6 +894,7 @@ caption,
     height: 200px;
  }
 }
+
 // SIDE NAV CREATE PAGES
 // ----------------
 div[data-spy="affix"] {
@@ -1052,7 +1041,6 @@ textarea.plain {
   }
   .navbar-primary .nav > li > a {
     border:0;
-    padding: 0;
     .border-radius(4px);
   }
   .navbar-primary .nav > li > a:hover {
