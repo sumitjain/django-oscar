@@ -1,21 +1,20 @@
-from django.utils.translation import ungettext, ugettext_noop
+from django.utils.translation import ungettext_lazy
 
 from django_tables2 import Table
 
 
 class DashboardTable(Table):
     _caption = None
-    caption_singular = ugettext_noop('{count} Row')
-    caption_plural = ugettext_noop('{count} Rows')
+    caption = ungettext_lazy('{count} Row', '{count} Rows')
 
     @property
     def caption(self):
-        if self._caption:
+        # Allow overriding the caption with an arbitrary string that we cannot
+        # interpolate the number of rows in
+        try:
+            return self._caption % self.paginator.count
+        except TypeError:
             return self._caption
-
-        return (ungettext(self.caption_singular, self.caption_plural,
-                          self.paginator.count)
-                .format(count=self.paginator.count))
 
     @caption.setter
     def caption(self, caption):
